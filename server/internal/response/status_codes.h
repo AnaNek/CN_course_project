@@ -1,0 +1,17 @@
+#ifndef __STATUS_CODES_H__
+#define __STATUS_CODES_H__
+
+/* 2xx */
+#define STATUS_OK 200
+
+/* 4xx */
+#define STATUS_BAD_REQUEST 400
+#define STATUS_UNAUTHORIZED 401
+#define STATUS_FORBIDDEN 403
+#define STATUS_NOT_FOUND 404
+#define STATUS_METHOD_NOT_ALLOWED 405
+
+/* 5xx */
+#define STATUS_SERVER_INTERNAL_ERROR 500
+
+#endif
