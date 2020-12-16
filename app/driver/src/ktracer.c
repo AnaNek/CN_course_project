@@ -77,12 +77,12 @@ static int get_proc_info(void __user *argp)
     char buf[64];
     int len = 0;
     int total_len = 0;
-    request_t req;
+    driver_request_t req;
     int err = 0;
     int i = 0;
 
     /* копирование данных из пространства пользователя  пр-во ядра */
-    if (copy_from_user(&req, (request_t __user *)argp, sizeof(req)))
+    if (copy_from_user(&req, (driver_request_t __user *)argp, sizeof(req)))
     {
         printk("copy_from_user() failed");
         return -EFAULT;

@@ -215,7 +215,10 @@ int process_get_request(int client_sockfd, int pid)
         return ERR_DRIVER;
     }
 
+    req.pid = pid;
+    req.len = DRIVER_BUF_SIZE;  
     rc = ioctl(fd, TRACER_GET_INFO, &req);
+    //printf("rc %d req %s\n", rc, req.buf);
     close(fd);
 
     if (rc)
